@@ -32,6 +32,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-postcss": "^6.3.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.0.1",
     "postcss-cssnext": "^2.9.0",
     "postcss-pxtorem": "^4.0.0",

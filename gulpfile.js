@@ -13,7 +13,8 @@ const   cssnext       = require('postcss-cssnext'),
 // gulp Plugins
 const   concat         = require('gulp-concat'),
         uglify         = require('gulp-uglify'),
-      rename         = require('gulp-rename');
+        rename         = require('gulp-rename'),
+        sass           = require('gulp-sass');
 
 
 // Tasks
@@ -29,15 +30,21 @@ gulp.task('css', () => {
     svgFragments,
     cssnano
   ];
-  return gulp.src('./src/*.css')
+  return gulp.src('./dist/css/app.css')
     .pipe( postcss(processor) )
-    .pipe( gulp.dest('./dist') );
+    .pipe( gulp.dest('./dist/css') );
 });
+
+gulp.task('sass', () => {
+  return gulp.src('./src/sass/app.scss')
+    .pipe( sass())
+    .pipe(gulp.dest('./dist/css'))
+})
 
 // Javascript
 
 gulp.task('concatenate', () => {
-  gulp.src([
+  return gulp.src([
     './src/js/vendor/**/*.js',
     './src/js/main.js'
   ])
@@ -46,7 +53,7 @@ gulp.task('concatenate', () => {
 });
 
 gulp.task('minify', () => {
-  gulp.src([
+  return gulp.src([
     './dist/js/app.js'
   ])
   .pipe( uglify() )
@@ -57,7 +64,8 @@ gulp.task('minify', () => {
 
 // DEFAULT TASKS
 gulp.task('default', () => {
-  gulp.watch('./src/*.css', ['css']);
+  gulp.watch('./src/sass/**/*.scss', ['sass']);
+  gulp.watch('./dist/css/app.css', ['css']);
   gulp.watch('./src/**/*.js', ['concatenate', 'minify']);
 });
 
