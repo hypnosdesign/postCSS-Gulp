@@ -1,0 +1,52 @@
+body {
+  font-size: 16px;
+}
+
+.name {
+  background-color: color(steelblue a(70%));
+}
+
+@media (width > 769px) {
+  .name {
+    background-color: color(darkred a(70%));
+  }
+}
+
+:root {
+  --color-prim: #b22222;
+  --color-sec: steelblue;
+}
+
+h1 {
+  color: var(--color-prim);
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.icon-gear{
+  background: url(../svg/icons.svg#gear);
+}
+.icon-hammer {
+  background: url(../svg/icons.svg#hammer);
+}
+
+.icon-heart {
+  background: url(../svg/icons.svg#heart);
+}
+
+.icn {
+  width: 150px;
+  height: 150px;
+  margin: 50px 0;
+  padding: 10px;
+  }
+
+  .dot {
+    color: #ff0000;
+  }
