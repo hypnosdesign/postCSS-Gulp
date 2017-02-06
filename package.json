@@ -1,0 +1,33 @@
+{
+  "name": "post-css-and-gulp",
+  "version": "1.0.0",
+  "description": "Gulp task runner with post CSS to deploy a simple app in html,css and javascript",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypnosdesign/postCSS-Gulp.git"
+  },
+  "keywords": [
+    "gulp",
+    "postcss",
+    "npm",
+    "node",
+    "javascrit",
+    "css",
+    "html"
+  ],
+  "author": "Mattia Piano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hypnosdesign/postCSS-Gulp/issues"
+  },
+  "homepage": "https://github.com/hypnosdesign/postCSS-Gulp#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.3.0"
+  }
+}
