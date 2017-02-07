@@ -93,6 +93,7 @@ gulp.task('sass',() => {
     .pipe( sass())
     .pipe(maps.write('./'))
     .pipe(gulp.dest(path.dist + '/css'))
+    .pipe(sync.reload({ stream: true }));
 });
 
 
@@ -139,6 +140,7 @@ gulp.task('htmlpug', () => {
       pretty: true
       }))
     .pipe(gulp.dest(path.dist))
+    .pipe(sync.reload({ stream: true }));
 });
 
 gulp.task('default', ['html', 'minify', 'css', 'serve', 'sync']);
