@@ -6,3 +6,65 @@ header {
   width: 100%;
   background-color: $main-color;
 }
+
+
+//*****************
+body {
+  font-size: 16px;
+}
+
+.name {
+  background-color: color(steelblue a(70%));
+}
+
+/*@media (width > 769px) {
+  .name {
+    background-color: color(darkred a(70%));
+  }
+}*/
+
+:root {
+  --color-prim: #b22222;
+  --color-sec: steelblue;
+}
+
+h1 {
+  color: var(--color-prim);
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.icon {
+  width: 150px;
+  height: 150px;
+  margin: 50px 0;
+  padding: 10px;
+  display: inline-block;
+
+  &-gear{
+  background: url(../svg/icons.svg#gear);
+}
+  &-hammer {
+  background: url(../svg/icons.svg#hammer);
+}
+
+  &-heart {
+  background: url(../svg/icons.svg#heart);
+}
+
+}
+
+
+.icn {
+  
+  }
+
+  .dot {
+    color: #ff0000;
+  }
